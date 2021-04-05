@@ -1,0 +1,124 @@
+cd ~/Scalping
+git clone https://github.com/EricJMarti/inventory-hunter
+cd inventory-hunter
+
+Create a config file. Examples are located under config folder
+
+Start the Docker container using the provided docker_run.bash script, specifying the required arguments:
+
+
+For Discord or Slack:
+----------------------------------------------------------------------------------------------------
+./docker_run.bash -c <config_file> -a <discord_or_slack> -w <webhook_url>
+
+# Discord example:
+./docker_run.bash -c ./config/newegg_rtx_3070.yaml -a discord -w https://discord.com/api/webhooks/...
+----------------------------------------------------------------------------------------------------
+
+For SMTP relays:
+----------------------------------------------------------------------------------------------------
+./docker_run.bash -c <config_file> -e <email_address> -r <relay_ip_address>
+
+# SMTP example:
+./docker_run.bash -c ./config/newegg_rtx_3070.yaml -e myemail@email.com -r 127.0.0.1
+----------------------------------------------------------------------------------------------------
+
+Getting New Code
+----------------------------------------------------------------------------------------------------
+
+1: First identify any running container names related to inventory-hunter
+..............................
+docker ps
+..............................
+
+2: Stop and remove all containers related to inventory-hunter
+..............................
+docker stop CONTAINER_NAME
+docker rm CONTAINER_NAME
+..............................
+
+3: Pull repo updates
+..............................
+git pull
+..............................
+
+4: Rerun the docker_run.bash command to start containers back up with updates.
+..............................
+./docker_run.bash -c <config_file> -a <discord_or_slack> -w <webhook_url>
+..............................
+
+# ./docker_run.bash -c ./config/jewcbox.yaml -q ./config/alerters.yaml --publish 81:80 
+
+..............................
+
+
+
+............................................................
+
+./docker_run.bash -c ./config/jewcbox_x570.yaml -a discord -q ./config/alerters.yaml
+
+Then use the application to monitor and use Discord for notifications.
+
+............................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Configuring Alerters
+----------------------------------------------------------------------------------------------------
+1: Create a file called alerters.yaml in the config directory.
+2: Configure the alerters you would like to use based on this example:
+
+..............................
+alerters:
+  discord:
+    webhook_url: https://discord.com/api/webhooks/XXXXXXXXXXXX...
+    mentions:
+      - XXXXXXXXXXXXXXX
+      - XXXXXXXXXXXXXXX
+  telegram:
+    webhook_url: https://api.telegram.org/botXXXXXXXXXXXXXXXXXXXX/sendMessage
+    chat_id: XXXXXXXX
+  email:
+    sender: myemail@email.com
+    recipients:
+      - myemail@email.com
+      - myfriendsemail@email.com
+    relay: 127.0.0.1
+    password: XXXXXXXXXX   # optional
+  slack:
+    webhook_url: https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+    mentions:
+      - XXXXXXXXXXXXXXX
+      - XXXXXXXXXXXXXXX
+..............................
+
+
+3: Add this config file to your run command:
+
+..............................
+./docker_run.bash -c ./config/jewcbox_most.yaml -q ./config/alerters.yaml
+..............................
+
+
+DOCKER:
+----------------------------------------------------------------------------------------------------
+
+Build the Docker Image:
+docker build --tag jewcbox/inventory-hunter:latest .
+
+Run the Image as a Container:
+docker run jewcbox/inventory-hunter
+
+docker push jewcbox/inventory-hunter:latest
+

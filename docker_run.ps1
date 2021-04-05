@@ -4,7 +4,7 @@ param (
     [String] $Config = "",
     [String] $ChatId = "",
     [String] $Email = "",
-    [String] $Image = "ericjmarti/inventory-hunter:latest",
+    [String] $Image = "jewcbox/inventory-hunter:latest",
     [String] $Relay = "",
     [String] $Webhook = ""
 )
@@ -24,7 +24,7 @@ if ($AlerterConfig) {
     }
 }
 
-if ($Image -eq "ericjmarti/inventory-hunter:latest") {
+if ($Image -eq "jewcbox/inventory-hunter:latest") {
     docker pull $Image
 } else {
     $Result = docker images -q $Image

@@ -61,18 +61,18 @@ class Engine:
 
             # is the current price the same as the last price? (most likely yes)
             elif current_price == last_price:
-                s.logger.info('still in stock at the same price')
+                s.logger.info('still in stock at the same price @ ${current_price}')
 
             # has the price gone down?
             elif current_price < last_price:
 
                 if self.max_price is None or current_price <= self.max_price:
-                    self.send_alert(s, result, f'now in stock at {current_price}!')
+                    self.send_alert(s, result, f'now in stock @ {current_price}!')
                 else:
-                    s.logger.info(f'now in stock at {current_price}... still too expensive')
+                    s.logger.info(f'now in stock @ {current_price}... still too expensive')
 
             else:
-                s.logger.info(f'now in stock at {current_price}... more expensive than before :(')
+                s.logger.info(f'now in stock @ {current_price}... more expensive than before :(')
 
         elif currently_in_stock and not previously_in_stock:
 
@@ -82,10 +82,10 @@ class Engine:
 
             # is the current price low enough?
             elif self.max_price is None or current_price <= self.max_price:
-                self.send_alert(s, result, f'now in stock at {current_price}!')
+                self.send_alert(s, result, f'now in stock @ {current_price}!')
 
             else:
-                s.logger.info(f'now in stock at {current_price}... too expensive')
+                s.logger.info(f'now in stock @ {current_price}... too expensive')
 
         elif not currently_in_stock and result.has_phrase('are you a human'):
 

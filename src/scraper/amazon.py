@@ -5,9 +5,21 @@ class AmazonScrapeResult(ScrapeResult):
     def parse(self):
         alert_subject = 'In Stock'
         alert_content = ''
-
+        
+        details = self.soup.body.find('h1', id='title')
+        if details:
+            
+            titletag = details.find('span', id='productTitle')
+            if titletag:
+                title = titletag.text.strip()
+                self.logger.warning(f'FOUND Title Element h1 > span: {title}  {self.url}')
+            else:
+                self.logger.warning(f'MISSING Title Element h1 > span {self.url}')
+        else:
+            self.logger.warning(f'MISSING Title Element h1 {self.url}')
+        
         # get name of product
-        tag = self.soup.body.select_one('h1#title > span#productTitle')
+        tag = self.soup.body.find("span", attrs={"id":'productTitle'})
         if tag:
             alert_content += tag.text.strip() + '\n'
         else:
@@ -22,7 +34,8 @@ class AmazonScrapeResult(ScrapeResult):
             alert_subject = f'In Stock for {price_str}'
 
         # check for add to cart button
-        tag = self.soup.body.select_one('span.a-button-inner > span#submit\\.add-to-cart-announce')
+        # tag = self.soup.body.select_one('span.a-button-inner > span#submit\\.add-to-cart-announce')
+        tag = self.soup.body.select_one('span.a-button-inner > #add-to-cart-button[type="button"]')
         if tag:
             self.alert_subject = alert_subject
             self.alert_content = f'{alert_content.strip()}\n{self.url}'

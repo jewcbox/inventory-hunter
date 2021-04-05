@@ -7,3 +7,5 @@ __pycache__
 config/private
 data/
 log/
+_backups
+_resources

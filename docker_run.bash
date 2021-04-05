@@ -17,7 +17,7 @@ usage() {
 [ $# -eq 0 ] && usage
 
 alerter="email"
-default_image="ericjmarti/inventory-hunter:latest"
+default_image="jewcbox/inventory-hunter:latest"
 image=$default_image
 network="inventory_hunter"
 
@@ -95,7 +95,8 @@ volumes="-v $data_dir:/data -v $log_file:/log.txt -v $config:/config.yaml"
 
 entrypoint="--entrypoint=/src/run.bash"
 
-docker_run_cmd="docker run -d --rm $entrypoint --name $container_name --network $network $volumes $image --alerter $alerter"
+#docker_run_cmd="docker run -d --publish 81:80 --rm --name $container_name --network $network $volumes $image --alerter $alerter"
+docker_run_cmd="docker run -t -d --publish 81:80 --rm $entrypoint --name $container_name --network $network $volumes $image --alerter $alerter"
 
 if [ ! -z "$alerter_config" ]; then
     docker_run_cmd="$docker_run_cmd --alerter-config /alerters.yaml"

@@ -11,7 +11,7 @@ usage() {
     exit 1
 }
 
-default_image="ericjmarti/inventory-hunter:latest"
+default_image="jewcbox/inventory-hunter:latest"
 image=$default_image
 
 while getopts i: arg
@@ -37,7 +37,7 @@ tests_dir="$script_dir/tests"
 
 volumes="-v $tests_dir:/src/tests"
 
-docker_run_cmd="docker run --rm $volumes --entrypoint=pytest --workdir=/src $image"
+docker_run_cmd="docker run --post --rm $volumes --entrypoint=pytest --workdir=/src $image"
 
 echo "\$ $docker_run_cmd"
 eval $docker_run_cmd

@@ -1,0 +1,36 @@
+---
+refresh_interval: 1 # seconds
+max_price: 1600
+urls:
+  - https://www.amazon.com/AMD-Radeon-RX-5700-DisplayPort/dp/B08XWRNY2P/
+  - https://www.amazon.com/ASUS-3070-Graphics-DisplayPort-Bearings/dp/B08YX5W5PV/
+  - https://www.amazon.com/ASUS-Graphics-DisplayPort-Axial-tech-2-7-Slot/dp/B08WGTL4CW/
+  - https://www.amazon.com/ASUS-Graphics-DisplayPort-Axial-tech-2-9-Slot/dp/B08NWJ29NB/
+  - https://www.amazon.com/ASUS-Graphics-DisplayPort-Military-Grade-Certification/dp/B08HH5WF97
+  - https://www.amazon.com/ASUS-ROG-STRIX-RXVEGA56-O8G-GAMING-Ready-Gaming-Graphics/dp/B0788BTQKQ/
+  - https://www.amazon.com/Challenger-Graphics-Eyefinity-Technology-DisplayPort/dp/B08XZY2MS2/
+  - https://www.amazon.com/dp/B08J5F3G18/
+  - https://www.amazon.com/EVGA-08G-P5-3751-KR-GeForce-Gaming-Cooling/dp/B08LW46GH2/
+  - https://www.amazon.com/EVGA-08G-P5-3755-KR-GeForce-Cooling-Backplate/dp/B08L8L71SM/
+  - https://www.amazon.com/EVGA-08G-P5-3767-KR-GeForce-Technology-Backplate/dp/B08L8L9TCZ/
+  - https://www.amazon.com/EVGA-10G-P5-3897-KR-GeForce-Technology-Backplate/dp/B08HR3Y5GQ
+  - https://www.amazon.com/EVGA-GeForce-Technology-Backplate-24G-P5-3987-KR/dp/B08J5F3G18/
+  - https://www.amazon.com/Gaming-GeForce-Graphics-DisplayPort-Bearings/dp/B08Y9B8L43/
+  - https://www.amazon.com/gp/product/B08HR3Y5GQ/ # EVGA 10G-P5-3897-KR GeForce RTX 3080
+  - https://www.amazon.com/MSI-Gaming-RTX-2060-Super/dp/B07V1Q4L2Z
+  - https://www.amazon.com/MSI-GeForce-320-Bit-Architecture-Graphics/dp/B08HR5SXPS
+  - https://www.amazon.com/MSI-GeForce-Architecture-Overclocked-Graphics/dp/B07V265ZBH
+  - https://www.amazon.com/MSI-GeForce-Architecture-Overclocked-Graphics/dp/B07V39YSPF
+  - https://www.amazon.com/MSI-GeForce-Architecture-Overclocked-Graphics/dp/B07V39YSPF/
+  - https://www.amazon.com/MSI-GeForce-RTX-3060-12G/dp/B08WPJ5P4R/
+  - https://www.amazon.com/MSI-GeForce-RTX-3080-10G/dp/B08HR7SV3M
+  - https://www.amazon.com/MSI-GeForce-RTX-3090-VENTUS/dp/B08HR9D2JS
+  - https://www.amazon.com/MSI-GeForce-Tri-Frozr-Architecture-Graphics/dp/B08HR7SV3M
+  - https://www.amazon.com/MSI-GeForce-Tri-Frozr-Architecture-Graphics/dp/B08HR7SV3M/
+  - https://www.amazon.com/MSI-GeForce-Tri-Frozr-Architecture-Graphics/dp/B08HRBW6VB
+  - https://www.amazon.com/MSI-Radeon-6800-Architecture-16G/dp/B08RJ6YBH5/
+  - https://www.amazon.com/Radeon-Installed-Triple-Model-ROG-STRIX-RX5700XT-O8G-GAMING/dp/B07XC5CQDK/
+  - https://www.amazon.com/sm/dp/B08WHJPBFX
+  - https://www.amazon.com/ZOTAC-Graphics-IceStorm-Advanced-ZT-A30700E-10P/dp/B08LF32LJ6/
+  - https://www.amazon.com/ZOTAC-Graphics-IceStorm-Advanced-ZT-A30700H-10P/dp/B08LF1CWT2/
+...

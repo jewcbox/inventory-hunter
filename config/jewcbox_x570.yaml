@@ -1,0 +1,30 @@
+---
+refresh_interval: 1.5 # seconds
+max_price: 1600
+urls:
+  # ASUS ROG X570 Crosshair VIII Hero ATX
+  - https://www.newegg.com/asus-rog-crosshair-viii-hero/p/N82E16813119110
+  - https://www.amazon.com/ASUS-ROG-VIII-Motherboard-Integrated/dp/B07SYW3RT2
+  - https://www.amazon.com/ROG-Crosshair-VIII-Motherboard-802-11Ax/dp/B07SZXBTNW
+  - https://www.bestbuy.com/site/asus-rog-crosshair-viii-hero-socket-am4-usb-c-gen2-amd-motherboard-with-led-lighting/6356982.p?skuId=6356982
+  - https://www.bhphotovideo.com/c/product/1487131-REG/asus_90mb10t0_m0aay0_republic_of_gamers_crosshair.html
+  - https://www.amazon.com/ASUS-Graphics-DisplayPort-Axial-tech-2-7-Slot/dp/B08WGTL4CW/ref=pd_cart_vw_crc_1_1/132-4453211-5946256?_encoding=UTF8&pd_rd_i=B08WGTL4CW&pd_rd_r=31e692d8-49d3-400f-908f-bc4db916b850&pd_rd_w=7OXmz&pd_rd_wg=0Lktt&pf_rd_p=01004c92-8f40-4f1a-bee8-08cb36dccac2&pf_rd_r=TW17PTEAT6ZGXRZGQA53&psc=1&refRID=TW17PTEAT6ZGXRZGQA53
+  - https://www.amazon.com/MSI-GeForce-Tri-Frozr-Architecture-Graphics/dp/B08HRBW6VB
+  - https://www.amazon.com/MSI-GeForce-RTX-3090-VENTUS/dp/B08HR9D2JS
+  - https://www.amazon.com/MSI-GeForce-Tri-Frozr-Architecture-Graphics/dp/B08HR7SV3M
+  - https://www.amazon.com/MSI-GeForce-320-Bit-Architecture-Graphics/dp/B08HR5SXPS
+  - https://www.amazon.com/MSI-GeForce-Architecture-Overclocked-Graphics/dp/B07V39YSPF
+  - https://www.amazon.com/MSI-Gaming-RTX-2060-Super/dp/B07V1Q4L2Z
+  - https://www.amazon.com/MSI-GeForce-Architecture-Overclocked-Graphics/dp/B07V265ZBH
+  - https://www.newegg.com/msi-radeon-rx-6900-xt-rx-6900-xt-gaming-x-trio-16g/p/N82E16814137628
+  - https://www.newegg.com/msi-radeon-rx-6800-xt-rx-6800-xt-gaming-x-trio-16g/p/N82E16814137621
+  - https://www.newegg.com/msi-radeon-rx-6800-rx-6800-gaming-x-trio-16g/p/N82E16814137622
+  - https://www.newegg.com/msi-radeon-rx-6700-xt-rx-6700-xt-gaming-x-12g/p/N82E16814137642
+  - https://www.newegg.com/msi-rx6700xtmech-2x12goc/p/N82E16814137640
+  - https://www.newegg.com/msi-radeon-rx-6700-xt-rx-6700-xt-mech-2x-12g/p/N82E16814137641
+  - https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-gaming-x-trio-12g/p/N82E16814137629
+  - https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-gaming-x-12g/p/N82E16814137630
+  - https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-ventus-3x-12g-oc/p/N82E16814137631
+  - https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-ventus-2x-12g-oc/p/N82E16814137632
+  - https://www.newegg.com/msi-geforce-rtx-3060-rtx-3060-ventus-2x-12g/p/N82E16814137638
+...

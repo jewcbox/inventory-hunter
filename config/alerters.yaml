@@ -1,0 +1,6 @@
+alerters:
+  discord:
+    webhook_url: https://discord.com/api/webhooks/827180753828839455/mAXDDo52Ew9tN3VIG9AW3KY1Of6Yy7Ix4t-gO5mXdt1UpbCRek77wVj_akjxUDnLHoHm
+    mentions:
+      - everyone
+      - jewcbox

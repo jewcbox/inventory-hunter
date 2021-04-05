@@ -9,6 +9,7 @@ class NeweggScrapeResult(ScrapeResult):
         # get name of product
         is_combo = False
         tag = self.soup.body.find('h1', class_='product-title')
+        tag = self.soup.body.select_one('.product-wrap > h1.product-title')
         if tag:
             alert_content += tag.text.strip() + '\n'
         else:
