@@ -6,20 +6,8 @@ class AmazonScrapeResult(ScrapeResult):
         alert_subject = 'In Stock'
         alert_content = ''
         
-        details = self.soup.body.find('h1', id='title')
-        if details:
-            
-            titletag = details.find('span', id='productTitle')
-            if titletag:
-                title = titletag.text.strip()
-                self.logger.warning(f'FOUND Title Element h1 > span: {title}  {self.url}')
-            else:
-                self.logger.warning(f'MISSING Title Element h1 > span {self.url}')
-        else:
-            self.logger.warning(f'MISSING Title Element h1 {self.url}')
-        
         # get name of product
-        tag = self.soup.body.find("span", attrs={"id":'productTitle'})
+        tag = self.soup.body.find('span', id='productTitle')
         if tag:
             alert_content += tag.text.strip() + '\n'
         else:

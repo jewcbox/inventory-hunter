@@ -21,7 +21,7 @@ class InStockFixture(unittest.TestCase):
         self.assertTrue(self.result)
 
     def test_price(self):
-        self.assertEqual(self.result.price, 599.66)
+        self.assertEqual(self.result.price, 209.9)
 
 
 class InStockDeFixture(unittest.TestCase):
@@ -32,7 +32,7 @@ class InStockDeFixture(unittest.TestCase):
         self.assertTrue(self.result)
 
     def test_price(self):
-        self.assertEqual(self.result.price, 1130.00)
+        self.assertEqual(self.result.price, 31.99)
 
 
 class OutOfStockFixture(unittest.TestCase):

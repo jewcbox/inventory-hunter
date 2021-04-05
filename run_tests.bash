@@ -37,7 +37,7 @@ tests_dir="$script_dir/tests"
 
 volumes="-v $tests_dir:/src/tests"
 
-docker_run_cmd="docker run --post --rm $volumes --entrypoint=pytest --workdir=/src $image"
+docker_run_cmd="docker run --rm $volumes --entrypoint=pytest --workdir=/src $image"
 
 echo "\$ $docker_run_cmd"
 eval $docker_run_cmd

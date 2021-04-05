@@ -14,7 +14,7 @@ class AmdScrapeResult(ScrapeResult):
             self.logger.warning(f'missing title: {self.url}')
 
         # get list price
-        tag = self.soup.body.select_one('self.soup.body.select_one('.product-page-description > h4')').get_text()
+        tag = self.soup.body.select_one('.product-page-description > h4').get_text()
         price_str = self.set_price(tag)
         if price_str:
             alert_subject = f'In Stock for {price_str}'

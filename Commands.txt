@@ -1,5 +1,5 @@
 cd ~/Scalping
-git clone https://github.com/EricJMarti/inventory-hunter
+git clone https://github.com/jewcbox/inventory-hunter
 cd inventory-hunter
 
 Create a config file. Examples are located under config folder
@@ -113,12 +113,33 @@ alerters:
 
 DOCKER:
 ----------------------------------------------------------------------------------------------------
+https://docs.docker.com/language/python/configure-ci-cd/#set-up-the-github-actions-workflow
 
-Build the Docker Image:
+PERSONAL ACCESS TOKEN:
+69334821-62c4-4219-8b37-c71144f1fe48
+
+
+docker network create -d bridge my-bridge-network
+
 docker build --tag jewcbox/inventory-hunter:latest .
-
-Run the Image as a Container:
-docker run jewcbox/inventory-hunter
 
 docker push jewcbox/inventory-hunter:latest
 
+
+docker run jewcbox/inventory-hunter
+
+
+
+
+
+
+
+
+
+docker run -d p:5000:5000 --rm --entrypoint=/src/run.bash 
+--name jewcbox_most --network inventory_hunter -v /Users/jewcbox/Scalping/inventory-hunter/data/jewcbox_most:/data 
+-v /Users/jewcbox/Scalping/inventory-hunter/log/jewcbox_most.txt:/log.txt 
+-v /Users/jewcbox/Scalping/inventory-hunter/config/jewcbox_most.yaml:/config.yaml 
+-v /Users/jewcbox/Scalping/inventory-hunter/config/alerters.yaml:/alerters.yaml jewcbox/inventory-hunter:latest --alerter discord --alerter-config /alerters.yaml
+
+./run_tests.bash
